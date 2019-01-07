@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="image/favicon.png" type="image/png">
-        <title>Royal Hotel</title>
+        <title>Spectrum</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -16,40 +16,50 @@
         <!-- main css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <!-- Here Map Api -->
+        <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1542186754" />
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+
+        <style>
+            .error{
+                color: red;
+            }
+        </style>
     </head>
     <body>
         <!--================Header Area =================-->
         <header class="header_area">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo.png" alt=""></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="accomodation.html">Accomodation</a></li>
-                            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a></li>
-                                </ul>
-                            </li> 
-                            <li class="nav-item"><a class="nav-link" href="elements.html">Elemests</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div> 
-                </nav>
-            </div>
-        </header>
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <a class="navbar-brand logo_h" href="index.html"><img src="image/logo_.png" alt="" style="width:100px;height:70px;">Spectrum Drilling Tools</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav menu_nav ml-auto">
+                                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="gallery.html">Products</a></li>
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="blog.html">Master Bushing</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="blog-single.html">Casing</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
         <!--================Header Area =================-->
         
         <!--================Breadcrumb Area =================-->
@@ -70,21 +80,14 @@
         <!--================Contact Area =================-->
         <section class="contact_area section_gap">
             <div class="container">
-                <div id="mapBox" class="mapBox" 
-                    data-lat="40.701083" 
-                    data-lon="-74.1522848" 
-                    data-zoom="13" 
-                    data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
-                    data-mlat="40.701083"
-                    data-mlon="-74.1522848">
-                </div>
+                <div id="map" style="width: 100%; height: 400px; margin-bottom: 100px;"></div>
                 <div class="row">
                     <div class="col-md-3">
                         <div class="contact_info">
                             <div class="info_item">
                                 <i class="lnr lnr-home"></i>
                                 <h6>California, United States</h6>
-                                <p>Santa monica bullevard</p>
+                                <p>Santa Monica Bullevard</p>
                             </div>
                             <div class="info_item">
                                 <i class="lnr lnr-phone-handset"></i>
@@ -93,13 +96,14 @@
                             </div>
                             <div class="info_item">
                                 <i class="lnr lnr-envelope"></i>
-                                <h6><a href="#">support@colorlib.com</a></h6>
+                                <h6><a href="#">support@example.com</a></h6>
                                 <p>Send us your query anytime!</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-9">
-                        <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <h3>Get In Touch With Us</h3>
+                        <form class="row contact_form" id="contactForm" novalidate="novalidate">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
@@ -117,7 +121,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12 text-right">
-                                <button type="submit" value="submit" class="btn theme_btn button_hover">Send Message</button>
+                                <button id="contact_submit" value="submit" class="btn theme_btn button_hover">Send Message</button>
                             </div>
                         </form>
                     </div>
@@ -255,13 +259,117 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="vendors/isotope/isotope-min.js"></script>
         <script src="js/stellar.js"></script>
         <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-        <!--gmaps Js-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-        <script src="js/gmaps.min.js"></script>
         <!-- contact js -->
         <script src="js/jquery.form.js"></script>
         <script src="js/jquery.validate.min.js"></script>
         <script src="js/contact.js"></script>
         <script src="js/custom.js"></script>
+        <script>
+            $(".header_area").removeClass("navbar_fixed");
+            document.querySelector(".navbar").style.background="transparent";
+            var x1=document.querySelectorAll(".nav-item .nav-link");
+            for(var i=0;i<x1.length;i++){
+                x1[i].style.color="white";
+            }
+            document.querySelector(".logo_h img").src="image/logo_1w.png";
+            document.querySelector(".logo_h").style.color="white";
+
+            var nav_offset_top = $('.header_area').height() + 40; 
+            if ( $('.header_area').length ){ 
+                $(window).scroll(function(){
+                    var scroll = $(window).scrollTop();   
+                    if (scroll >= nav_offset_top ) {
+                        $(".header_area").addClass("navbar_fixed");
+                        document.querySelector(".navbar").style.background="white";
+                        var x=document.querySelectorAll(".nav-item .nav-link");
+                        for(var i=0;i<x.length;i++){
+                            x[i].style.color="#4F2B4F";
+                        }
+                        document.querySelector(".logo_h").style.color="#4F2B4F";
+                        document.querySelector(".logo_h img").src="image/logo_.png";
+                    } else {
+                        $(".header_area").removeClass("navbar_fixed");
+                        document.querySelector(".navbar").style.background="transparent";
+                        var x1=document.querySelectorAll(".nav-item .nav-link");
+                        for(var i=0;i<x1.length;i++){
+                            x1[i].style.color="white";
+                        }
+                        document.querySelector(".logo_h img").src="image/logo_1w.png";
+                        document.querySelector(".logo_h").style.color="white";
+                    }
+                });
+            };
+        </script>
+        <script  type="text/javascript" charset="UTF-8" >
+            /**
+                * Boilerplate map initialization code starts below:
+            */
+            
+            //Step 1: initialize communication with the platform
+            var platform = new H.service.Platform({
+                app_id: 'devportal-demo-20180625',
+                app_code: '9v2BkviRwi9Ot26kp2IysQ',
+                useHTTPS: true
+            });
+            var pixelRatio = window.devicePixelRatio || 1;
+            var defaultLayers = platform.createDefaultLayers({
+                tileSize: pixelRatio === 1 ? 256 : 512,
+                ppi: pixelRatio === 1 ? undefined : 320
+            });
+            
+            //Step 2: initialize a map - this map is centered over location set
+            var map = new H.Map(document.getElementById('map'),
+                defaultLayers.normal.map,{
+                center: {lat:52.5159, lng:13.3777},
+                zoom: 10,
+                pixelRatio: pixelRatio
+            });
+            
+            //Step 3: make the map interactive
+            // MapEvents enables the event system
+            // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+            var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+            
+            // Create the default UI components
+            var ui = H.ui.UI.createDefault(map, defaultLayers);
+            
+            // Now use the map as required...
+            var londonMarker = new H.map.Marker({lat:52.5159, lng:13.3777});
+            map.addObject(londonMarker);
+        </script>
+        <script>
+            $("#contactForm").submit(function(e) {
+                e.preventDefault();
+                setTimeout(function(){
+                    if($("label.error").is(":visible")){
+                        // Form is invalid don't submit
+                    } else {
+                        var name = $("#name").val();
+                        var email = $("#email").val();
+                        var subject = $("#subject").val();
+                        var message = $("#message").val();
+
+                        $("#contact_submit").html('Sending Response ...');
+                        $("#contact_submit").attr('disabled', 'disabled');
+
+                        $.ajax({
+                            type: "POST",
+                            url: "contact_process.php",
+                            data: { name, email, subject, message },
+                            success: function(res){
+                                $("#contact_submit").html('Send Message');
+                                if(res == 1){
+                                    $('#contactForm :input').attr('disabled', 'disabled');
+                                    $('#success').modal('show');
+                                } else {
+                                    $('#error').modal('show');
+                                    $("#contact_submit").removeAttr('disabled');
+                                }
+                            }
+                        });
+                    }
+                }, 10);
+            });
+        </script>
     </body>
 </html>
