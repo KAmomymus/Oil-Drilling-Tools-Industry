@@ -13,7 +13,7 @@ try {
     //Server settings
     $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com;';  					  // Specify main and backup SMTP servers
+    $mail->Host = 'smtp.gmail.com;';                      // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'exampletest469@gmail.com';         // SMTP username
     $mail->Password = 'qwerty12#$%';                      // SMTP password
@@ -24,25 +24,46 @@ try {
     $mail->setFrom('exampletest469@gmail.com');
     $mail->addAddress('exampletest469@gmail.com');     // Add a recipient
 
-    //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = "Contact Us Form Response";
+    if(isset($_POST['type']) && $_POST['type'] == "query"){
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+        //Content
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = $_POST['subject'];
 
-    $body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'></head><body>";
-	$body .= "<table style='width: 100%;'>";
-	$body .= "<tbody>";
-	$body .= "<tr><td style='border:none;'><strong>Name:</strong> {$name}</td></tr>";
-	$body .= "<tr><td style='border:none;'><strong>Email:</strong> {$email}</td></tr>";
-	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$subject}</td></tr><br>";
-	$body .= "<tr><td colspan='2' style='border:none;'><strong>Message:</strong> {$message}</td></tr>";
-	$body .= "</tbody></table>";
-	$body .= "</body></html>";
+        $email = $_POST['email'];
+        $message = $_POST['message'];
 
+        $body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'></head><body>";
+        $body .= "<table style='width: 100%;'>";
+        $body .= "<tbody>";
+        $body .= "<tr><td style='border:none;'><strong>Email:</strong> {$email}</td></tr>";
+        $body .= "<tr><td colspan='2' style='border:none;'><strong>Message:</strong> {$message}</td></tr>";
+        $body .= "</tbody></table>";
+        $body .= "</body></html>";  
+        
+    } else {
+
+        //Content
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = "Contact Us Form Response";
+
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $subject = $_POST['subject'];
+        $message = $_POST['message'];
+
+        $body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'></head><body>";
+        $body .= "<table style='width: 100%;'>";
+        $body .= "<tbody>";
+        $body .= "<tr><td style='border:none;'><strong>Name:</strong> {$name}</td></tr>";
+        $body .= "<tr><td style='border:none;'><strong>Email:</strong> {$email}</td></tr>";
+        $body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$subject}</td></tr><br>";
+        $body .= "<tr><td colspan='2' style='border:none;'><strong>Message:</strong> {$message}</td></tr>";
+        $body .= "</tbody></table>";
+        $body .= "</body></html>";
+    
+    }
+    
     $mail->Body = $body;
     $mail->send();
     echo 1;
