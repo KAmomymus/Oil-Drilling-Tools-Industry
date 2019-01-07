@@ -26,7 +26,7 @@ try {
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = $_POST['subject'];
+    $mail->Subject = "Contact Us Form Response";
 
     $name = $_POST['name'];
     $email = $_POST['email'];
