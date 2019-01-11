@@ -18,7 +18,7 @@ try {
     $mail->Username = 'exampletest469@gmail.com';         // SMTP username
     $mail->Password = 'qwerty12#$%';                      // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 587;                                    // TCP port to connect to
+    $mail->Port = 25;                                    // TCP port to connect to
 
     //Recipients
     $mail->setFrom('exampletest469@gmail.com');
