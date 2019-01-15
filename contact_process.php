@@ -13,12 +13,12 @@ try {
     //Server settings
     $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'relay-hosting.secureserver.net';                      // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'exampletest469@gmail.com';         // SMTP username
-    $mail->Password = 'qwerty12#$%';                      // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 25;                                    // TCP port to connect to
+    $mail->Host = localhost;                      // Specify main and backup SMTP servers
+    // $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    // $mail->Username = 'exampletest469@gmail.com';         // SMTP username
+    // $mail->Password = 'qwerty12#$%';                      // SMTP password
+    // $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    // $mail->Port = 25;                                    // TCP port to connect to
 
     //Recipients
     $mail->setFrom('exampletest469@gmail.com');
