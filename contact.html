@@ -331,38 +331,62 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             map.addObject(londonMarker);
         </script>
         <script>
-            $("#contactForm").submit(function(e) {
-                e.preventDefault();
-                setTimeout(function(){
+            // $("#contactForm").submit(function(e) {
+            //     e.preventDefault();
+            //     setTimeout(function(){
+            //         if($("label.error").is(":visible")){
+            //             // Form is invalid don't submit
+            //         } else {
+            //             var name = $("#name").val();
+            //             var email = $("#email").val();
+            //             var subject = $("#subject").val();
+            //             var message = $("#message").val();
+
+            //             $("#contact_submit").html('Sending Response ...');
+            //             $("#contact_submit").attr('disabled', 'disabled');
+
+            //             $.ajax({
+            //                 type: "POST",
+            //                 url: "contact_process.php",
+            //                 data: { name, email, subject, message },
+            //                 success: function(res){
+            //                     $("#contact_submit").html('Send Message');
+            //                     if(res == 1){
+            //                         $('#contactForm :input').attr('disabled', 'disabled');
+            //                         $('#success').modal('show');
+            //                     } else {
+            //                         $('#error').modal('show');
+            //                         $("#contact_submit").removeAttr('disabled');
+            //                     }
+            //                 }
+            //             });
+            //         }
+            //     }, 10);
+            // });
+
+                $('#contactForm').submit(function(e) {
+                  e.preventDefault();
+                  var name = $('#name').val();
+                  var email = $('#email').val();
+                  var subject = $('#subject').val();
+                  var message = $('#message').val();
+                  setTimeout(function(){
                     if($("label.error").is(":visible")){
                         // Form is invalid don't submit
                     } else {
-                        var name = $("#name").val();
-                        var email = $("#email").val();
-                        var subject = $("#subject").val();
-                        var message = $("#message").val();
-
-                        $("#contact_submit").html('Sending Response ...');
-                        $("#contact_submit").attr('disabled', 'disabled');
-
                         $.ajax({
-                            type: "POST",
-                            url: "contact_process.php",
+                            url: 'https://formspree.io/abhishek.bindra.ab@gmail.com',
+                            method: 'POST',
                             data: { name, email, subject, message },
-                            success: function(res){
-                                $("#contact_submit").html('Send Message');
-                                if(res == 1){
-                                    $('#contactForm :input').attr('disabled', 'disabled');
-                                    $('#success').modal('show');
-                                } else {
-                                    $('#error').modal('show');
-                                    $("#contact_submit").removeAttr('disabled');
-                                }
-                            }
-                        });
+                            success: function() {
+                                $('#contactForm :input').attr('disabled', 'disabled');
+                                $('#success').modal('show');
+                            }   
+                        }); 
                     }
-                }, 10);
-            });
+                  }, 10);
+                });
+
         </script>
     </body>
 </html>
