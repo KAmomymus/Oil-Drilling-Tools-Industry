@@ -217,20 +217,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> SPECT
 
                     $("#query-submit-btn").html('Submitting ...');
                     $("#query-submit-btn").attr('disabled', 'disabled');
+
                     $.ajax({
-                        type: "POST",
-                        url: "contact_process.php",
-                        data: { email, message, subject, type: "query" },
-                        success: function(res){
+                        url: 'https://formspree.io/info@spectrumdrillingtools.com',
+                        method: 'POST',
+                        data: { email, subject, message },
+                        success: function(){
                             $("#query-submit-btn").html('Submit Query');
-                            if(res == 1){
-                                $('#query-form :input').attr('disabled', 'disabled');
-                                $('#success').modal('show');
-                            } else {
-                                $("#query-submit-btn").removeAttr('disabled');
-                                $('#error').modal('show');
-                            }
-                        }
+                            $('#query-form :input').attr('disabled', 'disabled');
+                            $('#success').modal('show');
+                        }   
                     });
                 }
             });

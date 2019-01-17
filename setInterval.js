@@ -1,7 +1,6 @@
 
     setInterval(function(){
       if(document.querySelectorAll(".navbar_fixed").length>0){
-        console.log("Cool");
         document.querySelector(".navbar").style.background="white";
         var x1=document.querySelectorAll(".nav-item .nav-link");
         for(var i=0;i<x1.length;i++){
@@ -12,7 +11,7 @@
 
       }
       else{
-        console.log("Hello");document.querySelector(".navbar").style.background="transparent";var x=document.querySelectorAll(".nav-item .nav-link");
+        document.querySelector(".navbar").style.background="transparent";var x=document.querySelectorAll(".nav-item .nav-link");
         for(var i=0;i<x.length;i++){
           x[i].style.color="white";
         }

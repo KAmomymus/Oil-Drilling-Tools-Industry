@@ -26,7 +26,7 @@ $(document).ready(function(){
                 },
                 message: {
                     required: true,
-                    minlength: 20
+                    minlength: 1
                 }
             },
             messages: {
@@ -43,8 +43,8 @@ $(document).ready(function(){
                     email: "Please enter a valid email"
                 },
                 message: {
-                    required: "Um...yea, You have to write something to send this form.",
-                    minlength: "Thats all? Add some more words"
+                    required: "You have to write something to send this form.",
+                    minlength: "You have to write something to send this form."
                 }
             }
         })
