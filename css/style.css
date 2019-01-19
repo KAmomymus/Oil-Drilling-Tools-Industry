@@ -3628,6 +3628,7 @@ h1, h2, h3, h4, h5, h6 {
 .downloadGuide{
   background-color:#f2f2f2;
   padding:10px;
+  margin-left: 100px;
   border-bottom: 3px solid  #4F2B4F;
 }
 

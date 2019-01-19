@@ -73,50 +73,21 @@
         <section class="gallery_area section_gap">
             <div class="container-fluid">
                 <div class="row">
-                  <div class="col-md-3" style="padding-left: 40px;">
+                  <div class="col-md-2" style="padding-left: 30px;">
                       
-                  </div>
-                  <div class="col-md-7">
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-8">
-                            <div class="section_title text-center">
+                    </div>
+                    <div class="col-md-7">
+                      <div class="section_title text-center">
                                 <h2 class="title_color" id="pdct-title">BIT BREAKERS FOR FOR TCR BITS</h2>
                                 <h4>For National, EMSCO</h4>
                             </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2"></div>
-                  <div class="col-md-2"></div>
-                  <div class="col-md-7 text-center">
-                    <div class="gallery_img row">
-                          <div class="col-md-6"><img src="image/bit-breaker.png" alt="" style="width: 300px;"></div>
-                          <div class="col-md-6"><img src="image/bit-breaker-2.png" alt="" style="width: 300px;"></div>
+
+                            <div class="gallery_img row text-center">
+                          <div class="col-md-6"><img src="image/bit-breaker.png" alt="Spectrum Drilling Tools" title="Bit Breakers" style="width: 300px;"></div>
+                          <div class="col-md-6"><img src="image/bit-breaker-2.png" alt="Spectrum Drilling Tools" title="Bit Breakers" style="width: 300px;"></div>
                       </div>
-                  </div>
 
-                  <div class="col-md-3" style="padding-left: 50px; padding-right: 50px;">
-                    <div class="downloadGuide">
-                            <span style="font-size:12px;">
-                                Have any queries or need help?
-                            </span>
-                            <div id="query-form">
-                              <input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
-                              <textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
-                              <button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
-                            </div>
-                            <br>
-                            <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
-                            <a href="#">
-                                Bit Breaker Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                  </div>
-
-                  <div class="col-md-2"></div>
-                  <div class="col-md-8" style="margin-top: 50px;">
-                    <table class="table table-striped text-center">
+                    <table class="table table-striped text-center" style="margin-top: 50px;">
                       <thead>
                         <tr>
                           <th scope="col">S.No.</th>
@@ -237,10 +208,24 @@
                         </tr>
                       </tbody>
                     </table>
-                  </div>
-                  <div class="col-md-2"></div>
 
-                </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="downloadGuide">
+                            <span style="font-size:12px;">
+                                Have any queries or need help?
+                            </span>
+                            <div id="query-form">
+                                <input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
+                                <textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
+                                <button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
+                            </div>
+                            <br>
+                            <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
+                            <a href="#">
+                                Bit Breaker Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
         </section>
@@ -316,14 +301,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> SPECT
         <script src="setInterval.js"></script>
         <script>
         	$(document).scroll(function() {
-			    var y = $(document).scrollTop(), //get page y value 
-			        header = $("#side-menu");
-			    if(y >= 300)  {
-			        header.css({"position": "fixed", "top" : "150px", "left" : "40px"});
-			    } else {
-			        header.css("position", "static");
-			    }
-			});
+          var y = $(document).scrollTop(), //get page y value 
+              query = $(".downloadGuide");
+          if(y >= 300)  {
+              query.css({"position": "fixed", "top" : "130px"});
+          } else {
+              query.css("position", "static");
+          }
+      });
 
 			$("#query-submit-btn").on('click', function(){
         var email = $("#query-sender-email").val();

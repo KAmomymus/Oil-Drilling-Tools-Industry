@@ -72,7 +72,7 @@
         <section class="gallery_area section_gap">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-3" style="padding-left: 30px;">
+                    <div class="col-md-3" style="padding-left:30px;">
                         <div class="gallery_img" id="side-menu">
                             <span style="font-weight:bold;font-size:20px;color:black;">Casing Bushing Index</span>
                             <p>----------------------------------</p>
@@ -82,49 +82,37 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-9">
-                        <div class="row">
-                            <div class="col-md-1"></div>
-                            <div class="col-md-8">
-                                <div class="section_title text-center">
-                                    <h2 class="title_color" id="pdct-title">For 37½" – 49½" Rotary Table</h2>
-                                    <!-- <h4>For National, EMSCO</h4> -->
-                                </div>
-                            </div>
+                    <div class="col-md-6">
+                        <div class="section_title text-center">
+                            <h2 class="title_color" id="pdct-title">For 37½" – 49½" Rotary Table</h2>
+                            <!-- <h4>For National, EMSCO</h4> -->
                         </div>
-                        <div class="row">
-                            <div class="col-md-1"></div>
-                            <div class="col-md-6 text-center">
-                                <div class="gallery_img row">
-                                    <div class="col-md-6"><img src="image/cb-1.png" alt="" style="width: 100%"></div>
-                                    <div class="col-md-6"><img src="image/cb-2.png" alt="" style="width: 100%"></div>
-                                </div>
+
+                        <div class="gallery_img row">
+                            <div class="col-md-6"><img src="image/cb-1.png" alt="Spectrum Drilling Tools" title="Casing Bushing" style="width: 100%"></div>
+                            <div class="col-md-6"><img src="image/cb-2.png" alt="Spectrum Drilling Tools" title="Casing Bushing" style="width: 100%"></div>
+                        </div><br><br>
+
+                        Spectrum Drilling Tools International developed Casing Bushing Model SDTISCB in to handle tubular of different sizes i.e 30", 26", 24, 18.5/8" & 20" and Casing Bowls. Split Casing bushing are interchangeable with varco casing bushings. Casing Bushing is used when the casing is run into the drilled hole it is desired that casing string must be aligned with the center of the hole and casing can be rotated during cementing operations. This ensures placement of cement slurry uniformly around the casing for a good cement bonding between casing and borehole. 
+                    </div>
+                    <div class="col-md-3">
+                        <div class="downloadGuide">
+                            <span style="font-size:12px;">
+                                Have any queries or need help?
+                            </span>
+                            <div id="query-form">
+                                <input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
+                                <textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
+                                <button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
                             </div>
-                            <div class="col-md-2"></div>
-                            <div class="col-md-3">
-                                <div class="downloadGuide">
-                                    <span style="font-size:12px;">
-                                        Have any queries or need help?
-                                    </span>
-                                    <div id="query-form">
-                                        <input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
-                                        <textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
-                                        <button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
-                                    </div>
-                                    <br>
-                                    <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
-                                    <a href="#">
-                                        Casing Bushing For 37½" – 49½" Rotary Table Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-9" style="margin-top: 50px; margin-bottom: 50px;">
-                                Spectrum Drilling Tools International developed Casing Bushing Model SDTISCB in to handle tubular of different sizes i.e 30", 26", 24, 18.5/8" & 20" and Casing Bowls. Split Casing bushing are interchangeable with varco casing bushings. Casing Bushing is used when the casing is run into the drilled hole it is desired that casing string must be aligned with the center of the hole and casing can be rotated during cementing operations. This ensures placement of cement slurry uniformly around the casing for a good cement bonding between casing and borehole. 
-                            </div>
+                            <br>
+                            <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
+                            <a href="#">
+                                Casing Bushing For 37½" – 49½" Rotary Table Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <!--================Breadcrumb Area =================-->
         
@@ -198,14 +186,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> SPECT
         <script src="setInterval.js"></script>
         <script>
         	$(document).scroll(function() {
-			    var y = $(document).scrollTop(), //get page y value 
-			        header = $("#side-menu");
-			    if(y >= 300)  {
-			        header.css({"position": "fixed", "top" : "150px", "left" : "30px"});
-			    } else {
-			        header.css("position", "static");
-			    }
-			});
+                var y = $(document).scrollTop(), //get page y value 
+                    header = $("#side-menu");
+                    query = $(".downloadGuide");
+                if(y >= 320)  {
+                    header.css({"position": "fixed", "top" : "150px"});
+                    query.css({"position": "fixed", "top" : "150px", "margin-right": "15px"});
+                } else {
+                    header.css("position", "static");
+                    query.css({"position": "static", "margin-right": "0px"});
+                }
+            }); 
 
 			$("#query-submit-btn").on('click', function(){
                 var email = $("#query-sender-email").val();

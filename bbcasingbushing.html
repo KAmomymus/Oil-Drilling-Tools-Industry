@@ -72,7 +72,7 @@
         <section class="gallery_area section_gap">
             <div class="container-fluid">
                 <div class="row">
-                	<div class="col-md-3" style="padding-left: 40px;">
+                	<div class="col-md-3" style="padding-left: 30px;">
                     	<div class="gallery_img" id="side-menu">
                             <span style="font-weight:bold;font-size:20px;color:black;">Bushing Bowls Index</span>
                             <p>---------------------------------------</p>
@@ -81,53 +81,43 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-9">
-                    	<div class="row">
-                            <div class="col-md-1"></div>
-                            <div class="col-md-8">
-                                <div class="section_title text-center">
-                                    <h2 class="title_color" id="pdct-title">For Casing Bushing</h2>
-                                    <h4>For National, EMSCO</h4>
-                                </div>
-                            </div>
+                    <div class="col-md-6">
+                    	<div class="section_title text-center">
+                            <h2 class="title_color" id="pdct-title">For Casing Bushing</h2>
+                            <h4>For National, EMSCO</h4>
                         </div>
-		                <div class="row">
-		                	<div class="col-md-8">
-		                		<h5>Following Casing Bowls are available for Casing bushings for 37½” & 27½”  Rotary table</h5>
-                                
-                                <ul>
-                                    <li>Casing Bowl No. 16 to handle tubular size 16” OD casing</li>
-                                    <li>Casing Bowl No. 1 to handle tubular size 11.3/4” & 13.3/8” OD casing</li>
-                                    <li>Casing Bowl No. 2 to handle tubular size 9.5/8” &  10.3/4” OD casing</li>
-                                    <li>Casing Bowl No. 3 to handle tubular size 8.5/8” & smaller  OD casing</li>
-                                </ul> 
-                                <br/><br/>
-                                <h5>Following Casing Bowls are available for Octagon shape Casing bushing for 22”  Rotary table</h5> 
+                		<h5>Following Casing Bowls are available for Casing bushings for 37½” & 27½”  Rotary table</h5>
+                        
+                        <ul>
+                            <li>Casing Bowl No. 16 to handle tubular size 16” OD casing</li>
+                            <li>Casing Bowl No. 1 to handle tubular size 11.3/4” & 13.3/8” OD casing</li>
+                            <li>Casing Bowl No. 2 to handle tubular size 9.5/8” &  10.3/4” OD casing</li>
+                            <li>Casing Bowl No. 3 to handle tubular size 8.5/8” & smaller  OD casing</li>
+                        </ul> 
+                        <br/><br/>
+                        <h5>Following Casing Bowls are available for Octagon shape Casing bushing for 22”  Rotary table</h5> 
 
-                                <ul>
-                                    <li>Casing Bowl No. 2 to handle tubular size 9.5/8” &  10.3/4” OD casing</li>
-                                    <li>Casing Bowl No. 3 to handle tubular size 8.5/8” & smaller  OD casing</li>
-                                </ul> 
-		                	</div>
-		                	<div class="col-md-1"></div>
-		                	<div class="col-md-3">
-		                		<div class="downloadGuide">
-		                            <span style="font-size:12px;">
-		                                Have any queries or need help?
-		                            </span>
-		                            <div id="query-form">
-		                            	<input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
-		                            	<textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
-		                            	<button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
-		                            </div>
-		                            <br>
-		                            <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
-		                            <a href="#">
-		                                For Casing Bushing Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
-		                            </a>
-		                        </div>
-		                	</div>
-		                </div>
+                        <ul>
+                            <li>Casing Bowl No. 2 to handle tubular size 9.5/8” &  10.3/4” OD casing</li>
+                            <li>Casing Bowl No. 3 to handle tubular size 8.5/8” & smaller  OD casing</li>
+                        </ul> 
+                    </div>
+                    <div class="col-md-3">
+                        <div class="downloadGuide">
+                            <span style="font-size:12px;">
+                                Have any queries or need help?
+                            </span>
+                            <div id="query-form">
+                                <input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
+                                <textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
+                                <button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
+                            </div>
+                            <br>
+                            <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
+                            <a href="#">
+                                For Casing Bushing Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
         </section>
@@ -203,14 +193,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> SPECT
         <script src="setInterval.js"></script>
         <script>
         	$(document).scroll(function() {
-			    var y = $(document).scrollTop(), //get page y value 
-			        header = $("#side-menu");
-			    if(y >= 300)  {
-			        header.css({"position": "fixed", "top" : "150px", "left" : "40px"});
-			    } else {
-			        header.css("position", "static");
-			    }
-			});
+                var y = $(document).scrollTop(), //get page y value 
+                    header = $("#side-menu");
+                    query = $(".downloadGuide");
+                if(y >= 320)  {
+                    header.css({"position": "fixed", "top" : "150px"});
+                    query.css({"position": "fixed", "top" : "150px"});
+                } else {
+                    header.css("position", "static");
+                    query.css("position", "static");
+                }
+            }); 
 
 			$("#query-submit-btn").on('click', function(){
 				var email = $("#query-sender-email").val();
