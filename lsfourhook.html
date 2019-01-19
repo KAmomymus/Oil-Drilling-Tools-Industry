@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="image/favicon.png" type="image/png">
-        <title>LOAD CELL DIGITAL</title>
+        <title>LIFTING SLINGS</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -72,50 +72,21 @@
         <section class="gallery_area section_gap">
             <div class="container-fluid">
                 <div class="row">
-                  <div class="col-md-3" style="padding-left: 40px;">
+                  <div class="col-md-2" style="padding-left: 30px;">
                       
-                  </div>
-                  <div class="col-md-7">
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-8">
-                            <div class="section_title text-center">
+                    </div>
+                    <div class="col-md-7">
+                      <div class="section_title text-center">
                                 <h2 class="title_color" id="pdct-title">FOUR HOOKS TYPE</h2>
                                 <h4>For National, EMSCO</h4>
                             </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2"></div>
-                  <div class="col-md-2"></div>
-                  <div class="col-md-7 text-center">
-                    <div class="gallery_img">
-                        <img src="image/P1.png" alt="" style="width:240px;height:320px;">
-                    </div>
-                  </div>
 
-                  <div class="col-md-3" style="padding-left: 50px; padding-right: 50px;">
-                    <div class="downloadGuide">
-                        <span style="font-size:12px;">
-                            Have any queries or need help?
-                        </span>
-                        <div id="query-form">
-                            <input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
-                            <textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
-                            <button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
-                        </div>
-                        <br>
-                        <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
-                        <a href="#">
-                            Lifting Slings Four Hooks Type Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
+                            <!-- <div class="gallery_img text-center">
+                          <img src="image/" alt="Spectrum Drilling Tools" title="Load Cell Digital" style="width: 300px;">
+                      </div> -->
 
-                  <div class="col-md-2"></div>
-                  <div class="col-md-8" style="margin-top: 50px;">
-                    <table class="table table-striped">
-                      <thead>
+                    <table class="table table-striped" style="margin-top: 50px;">
+                                  <thead>
                         <tr>
                           <th scope="col">Description</th>
                           <th scope="col">Part No.</th>
@@ -136,10 +107,23 @@
                         </tr>
                       </tbody>
                     </table>
-                  </div>
-                  <div class="col-md-2"></div>
-
-                </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="downloadGuide">
+                            <span style="font-size:12px;">
+                                Have any queries or need help?
+                            </span>
+                            <div id="query-form">
+                                <input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
+                                <textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
+                                <button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
+                            </div>
+                            <br>
+                            <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
+                           <a href="#">
+                            Lifting Slings Four Hooks Type Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
+                        </a>
+                        </div>
                     </div>
                 </div>
         </section>
@@ -215,14 +199,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> SPECT
         <script src="setInterval.js"></script>
         <script>
         	$(document).scroll(function() {
-			    var y = $(document).scrollTop(), //get page y value 
-			        header = $("#side-menu");
-			    if(y >= 300)  {
-			        header.css({"position": "fixed", "top" : "150px", "left" : "40px"});
-			    } else {
-			        header.css("position", "static");
-			    }
-			});
+                var y = $(document).scrollTop(), //get page y value 
+                    header = $("#side-menu");
+                    query = $(".downloadGuide");
+                if(y >= 320)  {
+                    header.css({"position": "fixed", "top" : "150px"});
+                    query.css({"position": "fixed", "top" : "150px", "margin-right": "15px"});
+                } else {
+                    header.css("position", "static");
+                    query.css({"position": "static", "margin-right": "0px"});
+                }
+            }); 
 
 			$("#query-submit-btn").on('click', function(){
                 var email = $("#query-sender-email").val();

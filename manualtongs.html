@@ -72,55 +72,39 @@
         <section class="gallery_area section_gap">
             <div class="container-fluid">
                 <div class="row">
-                  <div class="col-md-3" style="padding-left: 30px;">
+                  <div class="col-md-2" style="padding-left: 30px;">
                       
-                  </div>
-                  <div class="col-md-7">
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-8">
-                            <div class="section_title text-center">
+                    </div>
+                    <div class="col-md-7">
+                      <div class="section_title text-center">
                                 <h2 class="title_color" id="pdct-title">MANUAL TONGS <br>(SDTI-MT-65 Model)</h2>
                                 <!-- <h4>For National, EMSCO</h4> -->
                             </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2"></div>
 
-                  <div class="col-md-2"></div>
-                  <div class="col-md-7 text-center">
-                    <div class="gallery_img">
-                        <img src="image/DSC_9412.jpg" alt="" style="width: 40%;">
-                    </div>
-                  </div>
-                  <div class="col-md-3" style="padding-left: 50px; padding-right: 30px;">
-                    <div class="downloadGuide">
-                        <span style="font-size:12px;">
-                            Have any queries or need help?
-                        </span>
-                        <div id="query-form">
-                            <input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
-                            <textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
-                            <button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
-                        </div>
-                        <br>
-                        <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
-                        <a href="#">
-                            Manual Tongs (SDTI-MT-65 Model) Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
+                            <div class="gallery_img text-center">
+                          <img src="image/DSC_9412.jpg" alt="Spectrum Drilling Tools" title="Manual Tongs" style="width: 40%;">
+                      </div>
 
-                  <div class="col-md-2"></div>
-                  <div class="col-md-7" style="margin-top: 50px;">
                     Spectrum Drilling Tools International make Manual Tongs (SDTI-MT- 65) are made as per the latest API-7K 6th edition and is designed for making up and breaking connections of Drill Pipes, Drill Collars and Tubings with a range from 3½” to 17” by means of easily change of lug jaws. Spectrum Drilling Tools International make Manual Tongs are designed to handle the torque capacity up to 65000 Ft/ LBS.<br>
                     Spectrum Drilling Tools International make Manual Tong having excellent durability are made from high grade of alloy steel dully harden and tempered with a controlled hardness and duly ultrasonic and magnetic particle tested.<br>
                     Spectrum Drilling Tools International make Manual Tong with interchangeable lug jaw fitted with replaceable type of dies which permits Tong to handle different sizes of tubulars by simply installing hinge jaws to handle large sizes of tubular up to 17”.
-                  </div>
-                  <div class="col-md-3"></div>
-
-                </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="downloadGuide">
+                            <span style="font-size:12px;">
+                                Have any queries or need help?
+                            </span>
+                            <div id="query-form">
+                                <input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
+                                <textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
+                                <button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
+                            </div>
+                            <br>
+                            <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
+                           <a href="#">
+                            Manual Tongs (SDTI-MT-65 Model) Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
+                        </a>
+                        </div>
                     </div>
                 </div>
         </section>
@@ -199,12 +183,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> SPECT
             $(document).scroll(function() {
                 var y = $(document).scrollTop(), //get page y value 
                     header = $("#side-menu");
-                if(y >= 300)  {
-                    header.css({"position": "fixed", "top" : "150px", "left" : "30px"});
+                    query = $(".downloadGuide");
+                if(y >= 280)  {
+                    header.css({"position": "fixed", "top" : "150px"});
+                    query.css({"position": "fixed", "top" : "150px", "margin-right": "15px"});
                 } else {
                     header.css("position", "static");
+                    query.css({"position": "static", "margin-right": "0px"});
                 }
-            });
+            }); 
 
             $("#query-submit-btn").on('click', function(){
                 var email = $("#query-sender-email").val();
