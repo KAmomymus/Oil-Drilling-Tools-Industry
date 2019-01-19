@@ -72,8 +72,8 @@
         <section class="gallery_area section_gap">
             <div class="container-fluid">
                 <div class="row">
-                	<div class="col-md-3" style="padding-left: 30px;">
-                    	<div class="gallery_img" id="side-menu">
+                    <div class="col-md-3" style="padding-left:30px;">
+                       <div class="gallery_img" id="side-menu">
                             <span style="font-weight:bold;font-size:20px;color:black;">Power Slip Index</span>
                             <p>---------------------------------------</p>
                             <ul>
@@ -82,43 +82,17 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-9">
-                        <div class="row">
-                            <div class="col-md-1"></div>
-                            <div class="col-md-8">
-                                <div class="section_title text-center">
-                                    <h2 class="title_color" id="pdct-title">PNEUMATIC POWER SLIP</h2>
-                                    <!-- <h4>For National, EMSCO</h4> -->
-                                </div>
-                            </div>
+                    <div class="col-md-6">
+                        <div class="section_title text-center">
+                            <h2 class="title_color" id="pdct-title">PNEUMATIC POWER SLIP</h2>
+                            <!-- <h4>For National, EMSCO</h4> -->
                         </div>
-		                <div class="row">
-		                	<div class="col-md-1"></div>
-		                	<div class="col-md-6 text-center">
-		                		<div class="gallery_img">
-		                            <img src="image/pneumatic-power-slip.png" alt="" style="height:400px;">
-		                        </div>
-		                	</div>
-		                	<div class="col-md-2"></div>
-		                	<div class="col-md-3">
-		                		<div class="downloadGuide">
-		                            <span style="font-size:12px;">
-		                                Have any queries or need help?
-		                            </span>
-		                            <div id="query-form">
-		                            	<input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
-		                            	<textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
-		                            	<button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
-		                            </div>
-		                            <br>
-		                            <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
-		                            <a href="#">
-		                                Pneumatic Power Slip Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
-		                            </a>
-		                        </div>
-		                	</div>
-		                	<div class="col-md-10" style="margin-top: 50px;">
-		                		Spectrum Drilling Tools International make Pneumatic Power Slip (SDTI-PPS-27) is fully automatic remote controlled air operated slip as per API - 7K and designed to protect the drill pipe and tubing with slip range from 3½” to 4½” and 4½” to 5½” by simply changing of inserts. Pneumatic Power slip can be controlled either by hand or foot operated remote control valve. Power slip are set by gravity plus applied air pressure and released by applied air pressure which eliminates the manual setting and lifting of slip. Pneumatic Power Slip is designed to fit into 27-1/2" and 37- 1/2" to 49-1/2" rotary tables equipped with API pin drive master bushing. The unit consists of five major assemblies as under:- <br><br>
+
+                        <div class="gallery_img text-center">
+                            <img src="image/pneumatic-power-slip.png" alt="Spectrum Drilling Tools" title="Pneumatic Power Slip" style="width: 40%">
+                        </div><br><br>
+
+                        Spectrum Drilling Tools International make Pneumatic Power Slip (SDTI-PPS-27) is fully automatic remote controlled air operated slip as per API - 7K and designed to protect the drill pipe and tubing with slip range from 3½” to 4½” and 4½” to 5½” by simply changing of inserts. Pneumatic Power slip can be controlled either by hand or foot operated remote control valve. Power slip are set by gravity plus applied air pressure and released by applied air pressure which eliminates the manual setting and lifting of slip. Pneumatic Power Slip is designed to fit into 27-1/2" and 37- 1/2" to 49-1/2" rotary tables equipped with API pin drive master bushing. The unit consists of five major assemblies as under:- <br><br>
                                 <ul>
                     <li>
                     <b class="lister">Top Cover Assembly</b><br>
@@ -151,8 +125,23 @@ hand operated pilot valve, quick exhaust valve and miscellaneous connecting hose
 Control System can be operated by Hand Control or Foot Pedal Control System.
                         </li>
                 </ul>
-		                	</div>
-		                </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="downloadGuide">
+                            <span style="font-size:12px;">
+                                Have any queries or need help?
+                            </span>
+                            <div id="query-form">
+                                <input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
+                                <textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
+                                <button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
+                            </div>
+                            <br>
+                            <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
+                            <a href="#">
+                                        Pneumatic Power Slip Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
+                                    </a>
+                        </div>
                     </div>
                 </div>
         </section>
@@ -228,14 +217,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> SPECT
         <script src="setInterval.js"></script>
         <script>
         	$(document).scroll(function() {
-			    var y = $(document).scrollTop(), //get page y value 
-			        header = $("#side-menu");
-			    if(y >= 300)  {
-			        header.css({"position": "fixed", "top" : "150px", "left" : "30px"});
-			    } else {
-			        header.css("position", "static");
-			    }
-			});
+                var y = $(document).scrollTop(), //get page y value 
+                    header = $("#side-menu");
+                    query = $(".downloadGuide");
+                if(y >= 320)  {
+                    header.css({"position": "fixed", "top" : "150px"});
+                    query.css({"position": "fixed", "top" : "150px", "margin-right": "15px"});
+                } else {
+                    header.css("position", "static");
+                    query.css({"position": "static", "margin-right": "0px"});
+                }
+            });
 
 			$("#query-submit-btn").on('click', function(){
                 var email = $("#query-sender-email").val();

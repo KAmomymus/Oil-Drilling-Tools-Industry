@@ -72,59 +72,42 @@
         <section class="gallery_area section_gap">
             <div class="container-fluid">
                 <div class="row">
-                  <div class="col-md-3" style="padding-left: 40px;">
+                  <div class="col-md-2" style="padding-left: 30px;">
                       
-                  </div>
-                  <div class="col-md-7">
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-8">
-                            <div class="section_title text-center">
+                    </div>
+                    <div class="col-md-7">
+                      <div class="section_title text-center">
                                 <h2 class="title_color" id="pdct-title">TONG DIES & SLIP INSERTS</h2>
                                 <h4>For National, EMSCO</h4>
                             </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2"></div>
-                  <div class="col-md-2"></div>
-                  <div class="col-md-7 text-center">
-                    <div class="gallery_img">
-                        <img src="image/P1.png" alt="" style="width:240px;height:320px;">
-                    </div>
-                  </div>
 
-                  <div class="col-md-3" style="padding-left: 50px; padding-right: 50px;">
-                    <div class="downloadGuide">
-                        <span style="font-size:12px;">
-                            Have any queries or need help?
-                        </span>
-                        <div id="query-form">
-                            <input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
-                            <textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
-                            <button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
-                        </div>
-                        <br>
-                        <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
-                        <a href="#">
-                            Tong Dies & Slip Inserts Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
+                            <!-- <div class="gallery_img text-center">
+                          <img src="image/DSC_9412.jpg" alt="Spectrum Drilling Tools" title="Manual Tongs" style="width: 40%;">
+                      </div> -->
 
-                  <div class="col-md-2"></div>
-                  <div class="col-md-8" style="margin-top: 50px;">
                     While running in or pulling out tubulars at oil rigs the joints (tool joints) are tightened or loosened with the help of manual tongs or power tongs. <br><br>
                     Dies are the principal element in the manual tongs and power tongs which carry out the job of gripping the tool joints, before torque application.(Rollers or chain are also used for gripping of tubulars while using pipe spinners). <br><br>
                     Spectrum Drilling Tools International manufactures tong dies out of best quality alloy steel. The dies are case hardened to a desired depth, while leaving the inner portion (core) ductile.The hardened surface is highly resistant to wear and exhibits quality gripping of tool joints. The inner ductile core absorbs the shock of sudden impact and heavy torque. The combined effect is efficient operation in the long run. Spectrum Drilling Tools International make dies meet OEM specifications.
-                  </div>
-                  <div class="col-md-2"></div>
-
-                </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="downloadGuide">
+                            <span style="font-size:12px;">
+                                Have any queries or need help?
+                            </span>
+                            <div id="query-form">
+                                <input type="text" class="form-control" id="query-sender-email" placeholder="Enter your email">
+                                <textarea class="form-control" rows="2" id="query-message" placeholder="Enter your query"></textarea>
+                                <button class="btn btn-block btn-warning" id="query-submit-btn">Submit Query</button>
+                            </div>
+                            <br>
+                            <span style="font-size:12px;">Just Click & Download Product Manual</span><br/>
+                           <a href="#">
+                            Tong Dies & Slip Inserts Catalogue &nbsp;<i class="fa fa-download" aria-hidden="true"></i>
+                        </a>
+                        </div>
                     </div>
                 </div>
         </section>
-
         <!--================Breadcrumb Area =================-->
         
         <!--================ start footer Area  =================-->	
@@ -197,14 +180,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> SPECT
         <script src="setInterval.js"></script>
         <script>
         	$(document).scroll(function() {
-			    var y = $(document).scrollTop(), //get page y value 
-			        header = $("#side-menu");
-			    if(y >= 300)  {
-			        header.css({"position": "fixed", "top" : "150px", "left" : "90px"});
-			    } else {
-			        header.css("position", "static");
-			    }
-			});
+                var y = $(document).scrollTop(), //get page y value 
+                    header = $("#side-menu");
+                    query = $(".downloadGuide");
+                if(y >= 320)  {
+                    header.css({"position": "fixed", "top" : "150px"});
+                    query.css({"position": "fixed", "top" : "150px", "margin-right": "15px"});
+                } else {
+                    header.css("position", "static");
+                    query.css({"position": "static", "margin-right": "0px"});
+                }
+            });
 
 			$("#query-submit-btn").on('click', function(){
                 var email = $("#query-sender-email").val();
