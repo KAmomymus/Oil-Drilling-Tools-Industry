@@ -509,7 +509,6 @@ button:focus {
   z-index: -1;
 }
 .breadcrumb_area .bg-parallax1 {
-  background: url("../image/bg01.jpg") no-repeat scroll  0/cover;
   opacity: 0.8;
 }
 
