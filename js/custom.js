@@ -88,4 +88,12 @@
     /*----------------------------------------------------*/
     $('.imageGallery1 .light').simpleLightbox();
 
+
+    $(function () {
+        if($(window).width() < 575) {
+           $(".gallery_img").removeClass("side-menu-scroll"); 
+           $(".downloadGuide").removeClass("query-scroll"); 
+        }    
+    });
+
 })(jQuery)
