@@ -90,7 +90,7 @@
 
 
     $(function () {
-        if($(window).width() < 575) {
+        if($(window).width() < 767) {
            $(".gallery_img").removeClass("side-menu-scroll"); 
            $(".downloadGuide").removeClass("query-scroll"); 
         }    

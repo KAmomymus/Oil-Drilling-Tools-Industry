@@ -138,6 +138,9 @@
     }
 }
 @media(max-width: 767px){
+	.navbar-brand-text {
+		display: none;
+	}
 	.about_content {
 		padding-bottom: 50px;
 	}
@@ -186,9 +189,6 @@
     }
 }
 @media(max-width: 575px){
-	.navbar-brand-text {
-		display: none;
-	}
 	.downloadGuide {
 		margin-left: 0px;
 		margin-top: 20px;
